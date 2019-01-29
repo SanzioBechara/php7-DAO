@@ -24,11 +24,20 @@ $aluno->insert();
 echo $aluno;
 */
 
+/*
+//alterar usuario
+$usuario = new Usuario();
+$usuario->loadById(2);
+$usuario->update("professor", "99999");
+echo $usuario;
+*/
+
+//delete usuarios
 $usuario = new Usuario();
 
-$usuario->loadById(2);
+$usuario->loadById(3);
 
-$usuario->update("professor", "99999");
+$usuario->delete();
 
 echo $usuario;
 
