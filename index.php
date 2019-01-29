@@ -13,8 +13,22 @@ require_once("config.php");
 //echo json_encode($lista);
 
 //Carregar um usuario com login
+//$usuario = new Usuario();
+//$usuario->login("root", "111");
+//echo $usuario;
+
+/*
+criando um novo usuario
+$aluno = new Usuario("aluno2", "senha2");
+$aluno->insert();
+echo $aluno;
+*/
+
 $usuario = new Usuario();
-$usuario->login("root", "111");
+
+$usuario->loadById(2);
+
+$usuario->update("professor", "99999");
 
 echo $usuario;
 
